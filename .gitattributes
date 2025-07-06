@@ -1,2 +1,43 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>랜덤 링크 이동</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f0f0f0;
+      font-family: sans-serif;
+    }
+    button {
+      padding: 1em 2em;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="goRandom()">랜덤 페이지로 이동하기</button>
+
+  <script>
+    const urls = [
+      "https://example1.com",
+      "https://example2.com",
+      "https://example3.com",
+      // ...
+      "https://example78.com"
+    ];
+
+    function goRandom() {
+      const randomIndex = Math.floor(Math.random() * urls.length);
+      window.location.href = urls[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
